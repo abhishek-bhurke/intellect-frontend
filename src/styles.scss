@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./assets/fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./assets/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-padding {
+    padding: 0px 10%;
+}
+
+@media (max-width: 767px) {
+    .main-padding {
+        padding: 0px 10%;
+    }
+}
+
+@media (max-width: 767px) {
+    .responsive {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.form-control::placeholder {
+    color: rgba(138, 138, 138, 1);
+    opacity: 1;
+    font-size: 12px;
+}
+
+.form-control:-ms-input-placeholder {
+    color: rgba(138, 138, 138, 1);
+    font-size: 12px;
+}
+
+.form-control::-ms-input-placeholder {
+    color: rgba(138, 138, 138, 1);
+    font-size: 12px;
+}
+
+.toast-top-center {
+    top: 10px !important;
+}

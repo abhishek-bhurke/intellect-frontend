@@ -1,0 +1,143 @@
+@import '../../colors.scss';
+
+:host {
+    display: block;
+    scroll-margin-top: 80px;
+}
+
+.contact-us-bg {
+    background-color: rgba(140, 185, 248, 0.1);
+    padding-bottom: 1%;
+}
+
+.contact-us-text {
+    font-size: 42px;
+    font-weight: 700;
+    color: $dark-blue;
+}
+
+.contact-us-sub-text {
+    font-size: 20px;
+    font-weight: 400;
+    color: $dark-text-color;
+}
+
+.divider {
+    border-left: 1px solid #EAEAF0;
+}
+
+.send-message-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: $dark-blue;
+}
+
+.form-label {
+    font-size: 14px;
+}
+
+.message-box {
+    margin-right: 15%;
+}
+
+.submit-btn {
+    background-color: $dark-blue;
+    color: $white-color;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 35px;
+    width: 144px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.attach-file {
+    font-size: 12px;
+    color: rgba(60, 0, 238, 1);
+    cursor: pointer;
+}
+
+.uploaded-file {
+    font-size: 12px;
+    border: 1px solid $dark-grey-text;
+    padding: 3px;
+    border-radius: 3px;
+    height: 100%;
+    display: block;
+    width: fit-content;
+
+}
+
+.delete-file {
+    cursor: pointer;
+}
+
+small {
+    font-size: 12px;
+}
+
+.contact-us-card {
+    background-color: $dark-blue;
+    width: 360px;
+    border-radius: 16px;
+}
+
+.contact-us-card-content {
+    background-color: rgba(140, 185, 248, 0.1);
+    color: $white-color;
+    font-size: 14px;
+    border-radius: 12px;
+}
+
+.contact-us-divider {
+    border-bottom: 2px solid rgba(140, 185, 248, 0.5);
+}
+
+.connect-with-us {
+    font-size: 16px;
+    color: $white-color;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+}
+
+.contact-us-card-position {
+    align-content: center;
+    position: relative;
+    right: 8%;
+}
+
+@media (max-width: 767px) {
+    .contact-us-card-inner-text {
+        text-align: center;
+    }
+
+    .contact-us-card-position {
+        align-content: center;
+        position: relative;
+        right: 1%;
+        top: 13px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.form-check-input:checked {
+    background-color: $dark-blue;
+    border-color: $dark-blue;
+}
+
+.form-check-input {
+    border-color: $dark-blue;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.message-box-container {
+    border-radius: 16px;
+}

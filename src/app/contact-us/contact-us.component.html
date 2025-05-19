@@ -1,0 +1,148 @@
+<div class="main-padding contact-us-bg mt-5">
+    <div class="row py-5">
+        <div class="col-md-3">
+            <div class="contact-us-text">
+                Contact Us
+            </div>
+        </div>
+        <div class="col-md-1 divider"></div>
+        <div class="col-md-8">
+            <div class="contact-us-sub-text"
+                *ngIf="contactUsForm.controls['whoYouAre'].value=='Hiring Manager / Client'">
+                Whether you join us as an in-house team member or consultant, you’re family. We believe in your
+                potential and we are devoted to helping you achieve your biggest, boldest ambitions. We’re here for you
+                and we won’t stop until you’re exactly where you want to be.
+            </div>
+            <div class="contact-us-sub-text" *ngIf="contactUsForm.controls['whoYouAre'].value=='Job Seeker'">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam pariatur laborum adipisci aperiam
+                nesciunt quasi! Quos ducimus, neque deserunt numquam voluptate qui consectetur nemo tempore quasi
+                debitis assumenda consequuntur quia.
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card border-0 message-box-container">
+                <div class="card-body py-5 message-box pt-4">
+                    <div class="send-message-text">Send us a Message</div>
+                    <form [formGroup]="contactUsForm">
+                        <div class="row gy-3 pt-2">
+                            <div class="col-md-12">
+                                <label class="form-label">Tell Us Who You Are</label>
+                                <div class="form-radio">
+                                    <input type="radio" class="me-2 form-check-input" id="hiring-manager"
+                                        value="Hiring Manager / Client" formControlName="whoYouAre"><span
+                                        class="me-4 form-label">Hiring Manager / Client</span>
+                                    <input type="radio" class="me-2 form-check-input" id="job-seeker" value="Job Seeker"
+                                        formControlName="whoYouAre"><span class="form-label">Job
+                                        Seeker</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">First Name <span class="text-danger">*</span></label>
+                                <input type="text" formControlName="firstName" class="form-control"
+                                    placeholder="Enter First Name">
+                                <div
+                                    *ngIf="contactUsForm.controls['firstName']?.invalid && (contactUsForm.controls['firstName']?.dirty || contactUsForm.controls['firstName']?.touched)">
+                                    <small class="text-danger"
+                                        *ngIf="contactUsForm.controls['firstName']?.errors?.['required']">First Name is
+                                        required</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                                <input type="text" formControlName="lastName" class="form-control"
+                                    placeholder="Enter Last Name">
+                                <div
+                                    *ngIf="contactUsForm.controls['lastName']?.invalid && (contactUsForm.controls['lastName']?.dirty || contactUsForm.controls['lastName']?.touched)">
+                                    <small class="text-danger"
+                                        *ngIf="contactUsForm.controls['lastName']?.errors?.['required']">Last Name is
+                                        required</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Id <span class="text-danger">*</span></label>
+                                <input type="text" formControlName="emailId" class="form-control"
+                                    placeholder="Enter Email Id">
+                                <div
+                                    *ngIf="contactUsForm.controls['emailId']?.invalid && (contactUsForm.controls['emailId']?.dirty || contactUsForm.controls['emailId']?.touched)">
+                                    <small class="text-danger"
+                                        *ngIf="contactUsForm.controls['emailId']?.errors?.['required']">Email Id is
+                                        required</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Contact Number</label>
+                                <input type="text" formControlName="mobileNumber" class="form-control"
+                                    placeholder="Enter Contact Number">
+                                <!-- <div
+                                    *ngIf="contactUsForm.controls['mobileNumber']?.invalid && (contactUsForm.controls['mobileNumber']?.dirty || contactUsForm.controls['mobileNumber']?.touched)">
+                                    <small class="text-danger"
+                                        *ngIf="contactUsForm.controls['mobileNumber']?.errors?.['required']">Contact Number is
+                                        required</small>
+                                </div> -->
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Message</label>
+                                <textarea cols="30" rows="3" class="form-control" placeholder="Enter Your Message"
+                                    formControlName="message"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <span class="attach-file" (click)="fileInput.click()" *ngIf="file.length==0">+ Attach
+                                    File</span>
+                                <input type="file" class="d-none" #fileInput (change)="inputFile($event)">
+                                <span class="uploaded-file" *ngIf="file.length>0"><img
+                                        src="../../assets/images/pdf-svgrepo-com.svg" width="25"
+                                        height="25">{{file[0]?.name}} <span class="delete-file" (click)="file = []"><img
+                                            src="../../assets/images/red-x-line-icon.svg" width="12"></span></span>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="align-content-center submit-btn text-center" (click)="sendMessage()">Send
+                                    Message
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 contact-us-card-position">
+            <div class="card contact-us-card">
+                <div class="card-body p-4">
+                    <div class="contact-us-card-content">
+                        <div class="row py-3">
+                            <div class="align-content-center col-md-2 pe-0 text-center"><img
+                                    src="../../assets/images/location.svg"></div>
+                            <div class="col-md-10 ps-1 contact-us-card-inner-text">B - 502, Crystal Tower, Near Infinity
+                                Mall, Andheri West, Mumbai
+                                -
+                                400053</div>
+                        </div>
+                    </div>
+                    <div class="contact-us-card-content mt-4">
+                        <div class="row py-3">
+                            <div class="align-content-center col-md-2 pe-0 text-center"><img
+                                    src="../../assets/images/phone.svg"></div>
+                            <div class="col-md-10 ps-1 contact-us-card-inner-text">+91-2156487895</div>
+                        </div>
+                    </div>
+                    <div class="contact-us-card-content mt-4 mb-4">
+                        <div class="row py-3">
+                            <div class="align-content-center col-md-2 pe-0 text-center"><img
+                                    src="../../assets/images/mail.svg"></div>
+                            <div class="col-md-10 ps-1 contact-us-card-inner-text">{{'support@testcompany.com'}}</div>
+                        </div>
+                    </div>
+                    <div class="contact-us-divider"></div>
+                    <div class="connect-with-us mt-3">Connect With Us</div>
+                    <div class="social-icons">
+                        <!-- <img src="../../assets/images/facebook.svg">
+                        <img src="../../assets/images/instagram.svg">
+                        <img src="../../assets/images/google.svg"> -->
+                        <img src="../../assets/images/linkedin.svg" (click)="goToLinkedin()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+@import '../../colors.scss';
+
+:host {
+    display: block;
+    scroll-margin-top: 80px;
+}
+
+.home-text {
+    font-size: 42px;
+    font-weight: 700;
+    color: $light-blue;
+}
+
+.typewriter {
+    color: $dark-blue !important
+}
+
+.home-text-sub {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $dark-text-color;
+}
+
+.home-talent-btn {
+    background-color: $dark-blue;
+    color: $white-color;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 35px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.home-bg {
+    background-image: url(../../assets/images/home-bg.svg);
+    background-repeat: no-repeat;
+    background-position-x: 6%;
+}

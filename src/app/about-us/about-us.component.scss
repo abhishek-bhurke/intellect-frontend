@@ -1,0 +1,246 @@
+@import '../../colors.scss';
+
+:host {
+    display: block;
+    scroll-margin-top: 80px;
+}
+
+.bg-about-us {
+    background-color: rgba(140, 185, 248, 0.1);
+}
+
+.about-main {
+    font-size: 42px;
+    font-weight: 700;
+    color: $dark-blue;
+}
+
+.divider {
+    border-left: 1px solid #EAEAF0;
+}
+
+.about-sub {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.about-cards {
+    background-color: rgba(140, 185, 248, 0.05);
+    border: none;
+    border-radius: 16px;
+}
+
+.about-card-main {
+    color: $light-blue;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.about-card-sub {
+    color: $dark-blue;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-card-text {
+    color: $dark-text-color;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.vision-image {
+    position: relative;
+    left: 61%;
+    bottom: 5%;
+}
+
+@media (max-width: 767px) {
+    .vision-image {
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.bullseye-arrow-image {
+    position: relative;
+    left: 15px;
+    bottom: 23px;
+}
+
+.handshake-image {
+    position: relative;
+    left: 16px;
+}
+
+.g-6 {
+    --bs-gutter-y: 6rem;
+}
+
+.about-us-sub-text {
+    color: $grey-text;
+    font-size: 19px;
+}
+
+.sub-padding {
+    padding: 0 5%;
+}
+
+.bg-about-us1 {
+    background-image: url('../../assets/images/Group\ 33699.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.bg-about-us2 {
+    background-image: url('../../assets/images/Group\ 33700.svg');
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+
+@media (min-width: 767px) {
+    .ps-10 {
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-us-responsive {
+        padding-top: 18%;
+    }
+
+    .trusted-relationship-card {
+        width: 100% !important;
+    }
+}
+
+.bg-trusted-relationships {
+    position: relative;
+    // height: 555px;
+    // overflow: hidden;
+    // z-index: 1;
+    // background-image: linear-gradient(to right,
+    //         rgba(140, 185, 248, 0),
+    //         rgba(140, 185, 248, 0.75)), url('../../assets/images/trusted-relationships.jpg');
+    // background: linear-gradient(to bottom,
+    //         rgba(140, 185, 248, 0),
+    //         rgba(140, 185, 248, 0.75)), url('../../assets/images/trusted-relationships.jpg') no-repeat;
+    // background-image: url('../../assets/images/trusted-relationships.jpg');
+    // background-size: cover;
+}
+
+.bg-trusted-relationships::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.1;
+    // height: 100%;
+    // width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    background-image: url('../../assets/images/trusted-relationships.jpg');
+}
+
+.bg-trusted-relationships::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    // height: 100%;
+    // width: 100%;
+    background: linear-gradient(to bottom,
+            rgba(140, 185, 248, 0),
+            rgba(140, 185, 248, 0.75));
+    z-index: 2;
+}
+
+.main-content-trusted-relationships {
+    position: relative;
+    z-index: 3;
+}
+
+.trusted-relationship-main {
+    font-size: 24px;
+    font-weight: 700;
+    color: $dark-blue;
+}
+
+.trusted-relationship-sub-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: $dark-text-color
+}
+
+.trusted-relationship-card {
+    position: relative;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 12px;
+    z-index: 1;
+    width: 49%;
+    border: 2px solid $light-blue
+}
+
+.trusted-relationship-card::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    // background: linear-gradient(to right, #8CB9F8, #4a90e2);
+    border-radius: 12px;
+    z-index: -1;
+}
+
+.expertise-image {
+    position: absolute;
+    top: -10%;
+}
+
+.about-sub-1 {
+    font-size: 20px;
+}
+
+.tooltip-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tooltip {
+    --background-tooltip: #6e7681;
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5em;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    background: var(--background-tooltip);
+    color: white;
+    border-radius: 5px;
+    width: 210px;
+    height: auto;
+    font-size: 13px;
+    text-align: center;
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    height: 0.6em;
+    width: 0.6em;
+    bottom: -0.2em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    background: var(--background-tooltip);
+}
+
+.tooltip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
