@@ -9,11 +9,12 @@ import { FooterComponent } from "./footer/footer.component";
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { LoaderComponent } from "./loader/loader.component";
+import { MatTooltipModule } from '@angular/material/tooltip'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, HeaderComponent, AboutUsComponent, HomeComponent, ServicesComponent, ContactUsComponent, FooterComponent, CommonModule, LoaderComponent],
+  imports: [RouterModule, HeaderComponent, AboutUsComponent, HomeComponent, ServicesComponent, ContactUsComponent, FooterComponent, CommonModule, LoaderComponent, MatTooltipModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

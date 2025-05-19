@@ -123,6 +123,13 @@ small {
         display: flex;
         justify-content: center;
     }
+
+}
+
+@media (min-width: 767px) {
+    .radio-button-form {
+        display: flex;
+    }
 }
 
 .form-check-input:checked {

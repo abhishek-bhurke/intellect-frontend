@@ -46,7 +46,8 @@ export class HeaderComponent {
     const element = document.getElementById(sectionId);
     this.activeSection = sectionId;
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth' });
+      this.closeMenu();
     }
   }
 }

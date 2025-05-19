@@ -204,9 +204,9 @@
 }
 
 .tooltip-container {
-    position: relative;
+    // position: relative;
     cursor: pointer;
-    transition: all 0.2s;
+    // transition: all 0.2s;
 }
 
 .tooltip {
@@ -243,4 +243,10 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+}
+
+@media (min-width: 767px) {
+    .wrap-text-web {
+        white-space: nowrap;
+    }
 }
