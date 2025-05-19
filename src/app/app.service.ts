@@ -9,6 +9,6 @@ export class AppService {
 
   constructor(private http: HttpClient) { }
   sendData(data: any): Observable<any> {
-    return this.http.post('http://localhost:3000/api/contact', data);
+    return this.http.post('https://intellect-backend.onrender.com/api/contact', data);
   }
 }
