@@ -143,6 +143,7 @@ small {
 
 .form-check-input {
     border-color: $dark-blue;
+    cursor: pointer;
 }
 
 .form-check-input:focus {
@@ -155,4 +156,13 @@ small {
 
 .contact-us-card-inner-text {
     padding-left: 0.25rem
+}
+
+.form-control {
+    font-size: 14px !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border-color: 1px solid #dee2e6 !important;
 }
