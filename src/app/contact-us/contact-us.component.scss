@@ -115,6 +115,10 @@ small {
         text-align: center;
     }
 
+    .contact-us-card-row {
+        --bs-gutter-y: 0.5rem !important;
+    }
+
     .contact-us-card-position {
         align-content: center;
         position: relative;
@@ -147,4 +151,8 @@ small {
 
 .message-box-container {
     border-radius: 16px;
+}
+
+.contact-us-card-inner-text {
+    padding-left: 0.25rem
 }
