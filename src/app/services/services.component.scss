@@ -96,6 +96,12 @@
     width: 420px;
 }
 
+@media (max-width:450px) {
+    .dream-job-expand-card:hover {
+        width: auto;
+    }
+}
+
 .dream-job-card-content {
     padding: 1rem;
     transition: opacity 0.3s ease;
@@ -206,6 +212,7 @@
     color: #444;
     margin-top: 0.5rem;
     font-size: 18px;
+    text-align: center;
 }
 
 .dream-job-expand-card:hover .dream-job-card-description {
@@ -233,6 +240,7 @@
     height: 530px;
     border: 1px solid $light-blue;
     border-radius: 12px;
+    overflow: auto;
 }
 
 .technology-container {
@@ -252,6 +260,7 @@
     font-weight: 500;
     color: #BBBBBB;
     cursor: pointer;
+    display: flex;
 }
 
 .technology-name-tab.active {
@@ -263,4 +272,28 @@
         height: auto;
         overflow: visible;
     }
+
+    .intellectisolutions {
+        font-size: 28px !important;
+    }
 }
+
+// @media (max-width:372px) {
+//     .technology-list {
+//         height: 557px !important;
+//     }
+
+//     .technology-card-height {
+//         height: 557px !important;
+//     }
+// }
+
+// @media (max-width:325px) {
+//     .technology-list {
+//         height: 609px !important;
+//     }
+
+//     .technology-card-height {
+//         height: 609px !important;
+//     }
+// }

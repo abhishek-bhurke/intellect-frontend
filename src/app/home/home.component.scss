@@ -38,3 +38,9 @@
     background-repeat: no-repeat;
     background-position-x: 6%;
 }
+
+@media (max-width:490px) {
+    .home-text {
+        width: 25%;
+    }
+}

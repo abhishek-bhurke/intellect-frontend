@@ -158,6 +158,7 @@
 .main-content-trusted-relationships {
     position: relative;
     z-index: 3;
+    --bs-gutter-x: 0 !important;
 }
 
 .trusted-relationship-main {
