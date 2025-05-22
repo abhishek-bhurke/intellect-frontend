@@ -12,7 +12,6 @@ import { RouterModule } from '@angular/router';
 export class ServicesComponent {
   activeTechnology: string = 'software-card'
   technologyCardScroll(id: string) {
-    debugger
     this.activeTechnology = id;
     const element = document.getElementById(id);
     var topPos: any = element?.offsetTop;
