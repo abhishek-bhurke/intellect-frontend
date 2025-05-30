@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent {
   selectedFile: File | null = null;
-  words = ['Futures', 'Website'];
+  words = ['Futures', 'Impact'];
   currentWordIndex = 0;
   displayText = '';
   isDeleting = false;

@@ -57,3 +57,20 @@
         padding-left: 1rem !important;
     }
 }
+
+.header-company-logo {
+    width: 340px;
+    height: 60px;
+}
+
+@media (max-width:490px) {
+    .header-company-logo {
+        width: 215px;
+        height: 58px;
+    }
+}
+
+.menu-position {
+    position: relative;
+    bottom: 10px;
+}

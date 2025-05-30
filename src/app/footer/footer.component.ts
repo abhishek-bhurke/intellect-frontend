@@ -15,6 +15,6 @@ export class FooterComponent {
     }
   }
   goToLinkedin() {
-    window.open('https://www.linkedin.com', '_blank')
+    window.open('https://www.linkedin.com/company/intellect-isolutions', '_blank')
   }
 }
