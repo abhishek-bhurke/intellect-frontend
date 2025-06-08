@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  year: any;
+  ngOnInit() {
+    this.year = new Date().getFullYear();
+  }
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     // this.activeSection = sectionId;

@@ -107,11 +107,16 @@
 
 @media (max-width: 767px) {
     .about-us-responsive {
-        padding-top: 18%;
+        padding-top: 30%;
     }
 
     .trusted-relationship-card {
         width: 100% !important;
+    }
+
+    .core-values-div {
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
 

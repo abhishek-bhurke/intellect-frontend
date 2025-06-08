@@ -7,16 +7,15 @@
         </div>
         <div class="col-md-1 divider"></div>
         <div class="col-md-8">
-            <div class="contact-us-sub-text"
-                *ngIf="contactUsForm.controls['whoYouAre'].value=='Hiring Manager / Client'">
+            <div class="contact-us-sub-text" *ngIf="contactUsForm.controls['whoYouAre'].value=='Job Seeker'">
                 Whether you join us as an in-house team member or consultant, you’re family. We believe in your
                 potential and we are devoted to helping you achieve your biggest, boldest ambitions. We’re here for you
                 and we won’t stop until you’re exactly where you want to be.
             </div>
-            <div class="contact-us-sub-text" *ngIf="contactUsForm.controls['whoYouAre'].value=='Job Seeker'">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam pariatur laborum adipisci aperiam
-                nesciunt quasi! Quos ducimus, neque deserunt numquam voluptate qui consectetur nemo tempore quasi
-                debitis assumenda consequuntur quia.
+            <div class="contact-us-sub-text"
+                *ngIf="contactUsForm.controls['whoYouAre'].value=='Hiring Manager / Client'">
+                Looking to build your dream team or hiring single contract role? Connect with our expert recruiters to
+                find top-tier talent tailored to your business needs.
             </div>
         </div>
     </div>
@@ -32,12 +31,14 @@
                                 <div class="form-radio radio-button-form">
                                     <div class="d-flex">
                                         <input type="radio" class="me-2 form-check-input" id="hiring-manager"
-                                            value="Hiring Manager / Client" formControlName="whoYouAre"><span
-                                            class="me-4 form-label text-nowrap">Hiring Manager / Client</span>
+                                            (change)="tellUs($event)" value="Hiring Manager / Client"
+                                            formControlName="whoYouAre"><span class="me-4 form-label text-nowrap">Hiring
+                                            Manager / Client</span>
                                     </div>
                                     <div class="">
                                         <input type="radio" class="me-2 form-check-input" id="job-seeker"
-                                            value="Job Seeker" formControlName="whoYouAre"><span class="form-label">Job
+                                            (change)="tellUs($event)" value="Job Seeker"
+                                            formControlName="whoYouAre"><span class="form-label">Job
                                             Seeker</span>
                                     </div>
                                 </div>
@@ -61,6 +62,19 @@
                                     *ngIf="contactUsForm.controls['lastName']?.invalid && (contactUsForm.controls['lastName']?.dirty || contactUsForm.controls['lastName']?.touched)">
                                     <small class="text-danger"
                                         *ngIf="contactUsForm.controls['lastName']?.errors?.['required']">Last Name is
+                                        required</small>
+                                </div>
+                            </div>
+                            <div class="col-md-12"
+                                *ngIf="contactUsForm.controls['whoYouAre'].value=='Hiring Manager / Client'">
+                                <label class="form-label">Company Name <span class="text-danger">*</span></label>
+                                <input type="text" formControlName="companyName" class="form-control"
+                                    placeholder="Enter Company Name">
+                                <div
+                                    *ngIf="contactUsForm.controls['companyName']?.invalid && (contactUsForm.controls['companyName']?.dirty || contactUsForm.controls['companyName']?.touched)">
+                                    <small class="text-danger"
+                                        *ngIf="contactUsForm.controls['companyName']?.errors?.['required']">Company Name
+                                        is
                                         required</small>
                                 </div>
                             </div>
@@ -95,9 +109,13 @@
                                 <span class="attach-file" (click)="fileInput.click()" *ngIf="file.length==0">+ Attach
                                     File</span>
                                 <input type="file" class="d-none" #fileInput (change)="inputFile($event)">
-                                <span class="uploaded-file" *ngIf="file.length>0"><img
-                                        src="../../assets/images/pdf-svgrepo-com.svg" width="25"
-                                        height="25">{{file[0]?.name}} <span class="delete-file" (click)="file = []"><img
+                                <span class="uploaded-file" *ngIf="file.length>0">
+                                    <img src="../../assets/images/docx_icon.svg.png" width="25" height="25"
+                                        *ngIf="file[0].type!='application/pdf'">
+                                    <img src="../../assets/images/pdf-svgrepo-com.svg" width="25" height="25"
+                                        *ngIf="file[0].type=='application/pdf'">
+                                    {{file[0]?.name}}
+                                    <span class="delete-file" (click)="file = []"><img
                                             src="../../assets/images/red-x-line-icon.svg" width="12"></span></span>
                             </div>
                             <div class="col-md-12">
@@ -117,7 +135,7 @@
                         <div class="row py-3 g-0 contact-us-card-row">
                             <div class="align-content-center col-md-2 pe-0 text-center"><img
                                     src="../../assets/images/location.svg"></div>
-                            <div class="col-md-10 contact-us-card-inner-text"><span>17 Prestwickway edison New Jersey
+                            <div class="col-md-10 contact-us-card-inner-text"><span>17 Prestwickway Edison New Jersey
                                     08820</span></div>
                         </div>
                     </div>

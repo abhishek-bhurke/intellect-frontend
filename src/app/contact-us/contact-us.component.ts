@@ -26,17 +26,18 @@ export class ContactUsComponent {
       'whoYouAre': ['Hiring Manager / Client', Validators.required],
       'firstName': ['', Validators.required],
       'lastName': ['', Validators.required],
+      'companyName': ['', Validators.required],
       'emailId': ['', Validators.required],
       'mobileNumber': [''],
       'message': ['']
     })
   }
   inputFile(event: any) {
-    if (event.target.files[0].type == 'application/pdf') {
+    if (event.target.files[0].type == 'application/pdf' || event.target.files[0].type == 'application/msword' || event.target.files[0].type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
       this.file = event.target.files;
     }
     else {
-      this.toastr.error('Kindly upload PDF file only.')
+      this.toastr.error('Kindly upload PDF/DOC/DOCX file only.')
     }
   }
   sendMessage() {
@@ -50,6 +51,7 @@ export class ContactUsComponent {
       let formData = new FormData();
       formData.append('whoYouAre', this.contactUsForm.controls['whoYouAre'].value)
       formData.append('name', this.contactUsForm.controls['firstName'].value + ' ' + this.contactUsForm.controls['lastName'].value)
+      formData.append('companyName', this.contactUsForm.controls['companyName'].value)
       formData.append('email', this.contactUsForm.controls['emailId'].value)
       formData.append('mobileNumber', this.contactUsForm.controls['mobileNumber'].value ? this.contactUsForm.controls['mobileNumber'].value : '')
       formData.append('message', this.contactUsForm.controls['message'].value)
@@ -71,5 +73,17 @@ export class ContactUsComponent {
   }
   goToLinkedin() {
     window.open('https://www.linkedin.com/company/intellect-isolutions', '_blank')
+  }
+  tellUs(event: any) {
+    if (this.contactUsForm.controls['whoYouAre'].value == 'Hiring Manager / Client') {
+      this.contactUsForm.controls['companyName'].setValue('')
+      this.contactUsForm.get('companyName')?.setValidators(Validators.required);
+      this.contactUsForm.get('companyName')?.updateValueAndValidity();
+    }
+    else {
+      this.contactUsForm.controls['companyName'].setValue('')
+      this.contactUsForm.get('companyName')?.clearValidators();
+      this.contactUsForm.get('companyName')?.updateValueAndValidity();
+    }
   }
 }

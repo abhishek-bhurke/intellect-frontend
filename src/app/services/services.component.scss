@@ -217,7 +217,7 @@
 
 .dream-job-expand-card:hover .dream-job-card-description {
     opacity: 1;
-    max-height: 200px;
+    max-height: 240px;
 }
 
 .dream-job-expand-card:hover {
@@ -233,6 +233,14 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .dream-job-expand-card {
+        height: 400px !important;
+    }
+
+    .our-services-cards-div {
+        display: none;
     }
 }
 
@@ -278,15 +286,25 @@
     }
 }
 
-// @media (max-width:372px) {
-//     .technology-list {
-//         height: 557px !important;
-//     }
+@media (max-width:767px) {
+    .our-process-img {
+        display: none;
+    }
 
-//     .technology-card-height {
-//         height: 557px !important;
-//     }
-// }
+    .our-process-img-mob {
+        display: block;
+    }
+}
+
+@media (min-width:767px) {
+    .our-process-img {
+        display: block;
+    }
+
+    .our-process-img-mob {
+        display: none;
+    }
+}
 
 // @media (max-width:325px) {
 //     .technology-list {
