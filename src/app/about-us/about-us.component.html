@@ -119,10 +119,10 @@
         <img src="../../assets/images/why choose us img 1.jpg" class="responsive sub-padding ps-10">
     </div>
     <div class="col-md-6 align-content-center bg-about-us1">
-        <div class="row g-6 sub-padding" (scroll)="tooltip.hide()">
+        <div class="row g-6 sub-padding">
             <div class="col-md-6 d-flex"><img src="../../assets/images/Experience & Reputation.svg" width="24"
                     height="29" class="me-3">
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" (click)="tooltip.show()"
+                <span class="about-us-sub-text tooltip-container" #tooltip1="matTooltip" (click)="tooltip1.show()"
                     matTooltip="Deep understanding of market dynamics make us a
                         reliable and trusted partner for temporary and contract staffing services.">Experience &
                     Reputation</span>
@@ -130,7 +130,7 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Excellent Candidate Support.svg" width="24"
                     height="29" class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" (click)="tooltip.show()"
+                <span class="about-us-sub-text tooltip-container" #tooltip2="matTooltip" (click)="tooltip2.show()"
                     matTooltip="We offer comprehensive support throughout the
                     hiring process, including resume assistance and interview preparation. This level of candidate
                     care enhances performance during the evaluation period, a key aspect of our role as a temporary
@@ -140,7 +140,7 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Quality of Candidates.svg" width="24" height="29"
                     class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" (click)="tooltip.show()"
+                <span class="about-us-sub-text tooltip-container" #tooltip3="matTooltip" (click)="tooltip3.show()"
                     matTooltip="Our rigorous screening process ensures that only
                     the most qualified candidates are presented to employers. This meticulous approach,
                     characteristic of expert temporary and contract recruiters, significantly reduces the risk of
@@ -150,7 +150,8 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Local Market Expertise.svg" width="24"
                     height="29" class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" matTooltip="Our deep understanding of the local job market
+                <span class="about-us-sub-text tooltip-container" #tooltip4="matTooltip" (click)="tooltip4.show()"
+                    matTooltip="Our deep understanding of the local job market
                     gives us an edge over national or global recruiting firms. This local insight benefits job
                     seekers and employers, ensuring a more tailored approach in our direct-hire staffing firm
                     services.">Local Market
@@ -159,7 +160,8 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Customized Solutions.svg" width="24" height="29"
                     class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" matTooltip="Recognizing the uniqueness of each organization’s
+                <span class="about-us-sub-text tooltip-container" #tooltip5="matTooltip" (click)="tooltip5.show()"
+                    matTooltip="Recognizing the uniqueness of each organization’s
                     needs, we provide tailored staffing solutions. This personalized approach, a hallmark of our
                     temporary and contract staffing services, sets us apart from other recruiting firms.">Customized
                     Solutions</span>
@@ -167,7 +169,8 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Personalized Approach.svg" width="24" height="29"
                     class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" matTooltip="Unlike larger firms, Intellect iSolutions offers a
+                <span class="about-us-sub-text tooltip-container" #tooltip6="matTooltip" (click)="tooltip6.show()"
+                    matTooltip="Unlike larger firms, Intellect iSolutions offers a
                     customized service, working closely with clients to understand their specific needs and
                     preferences. This customized approach enhances the effectiveness of our direct-hire placement
                     services.">Personalized
@@ -180,7 +183,7 @@
             <div class="col-md-6 d-flex about-us-responsive"><img src="../../assets/images/Industry Knowledge.svg"
                     width="24" height="29" class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip"
+                <span class="about-us-sub-text tooltip-container" #tooltip7="matTooltip" (click)="tooltip7.show()"
                     matTooltip="Our recruiters possess extensive knowledge across
                     various sectors, enabling them to select the right candidate for each job. This expertise is
                     crucial in ensuring successful placements as a temporary and contract staffing placement agency.">Industry
@@ -189,7 +192,8 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Highly Specialized & Tenured Recruiters.svg"
                     width="24" height="29" class="me-3">
 
-                <span class="about-us-sub-text tooltip-container wrap-text-web" #tooltip="matTooltip" matTooltip="Our team of direct-hire recruiters are not only
+                <span class="about-us-sub-text tooltip-container wrap-text-web" #tooltip8="matTooltip"
+                    (click)="tooltip8.show()" matTooltip="Our team of direct-hire recruiters are not only
                     experts in general recruitment but also possess specific knowledge across various sectors. This
                     expertise enables us to precisely understand and meet the unique needs of employers and job
                     seekers in fields ranging from engineering and IT to finance, sales, executive/management, HR,
@@ -200,7 +204,8 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Ethics & Integrity.svg" width="24" height="29"
                     class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" matTooltip="Our employment agency is applauded for its high
+                <span class="about-us-sub-text tooltip-container" #tooltip9="matTooltip" (click)="tooltip9.show()"
+                    matTooltip="Our employment agency is applauded for its high
                     ethical standards and integrity, as evidenced by our consistent recognition with the Pinnacle
                     Award and Excellence Awards from the Better Business Bureau. These values are fundamental in the
                     recruitment industry, emphasizing trust and confidentiality.">Ethics &
@@ -209,7 +214,8 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Comprehensive Services.svg" width="24"
                     height="29" class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" matTooltip="Beyond direct-hire placement, we offer a range of
+                <span class="about-us-sub-text tooltip-container" #tooltip10="matTooltip" (click)="tooltip10.show()"
+                    matTooltip="Beyond direct-hire placement, we offer a range of
                     services including payrolling, temp-to-hire solutions, and temporary staffing. This
                     comprehensive approach positions us as a versatile partner for various staffing needs across
                     different departments within organizations.">Comprehensive
@@ -218,7 +224,8 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Flexibility & Scalability.svg" width="24"
                     height="29" class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" matTooltip="Our ability to handle staffing requirements of any
+                <span class="about-us-sub-text tooltip-container" #tooltip11="matTooltip" (click)="tooltip11.show()"
+                    matTooltip="Our ability to handle staffing requirements of any
                     size, from individual placements to entire teams, makes us a versatile and preferred choice for
                     companies seeking scalable temp-to-hire staffing services.">Flexibility &
                     Scalability</span>
@@ -226,9 +233,10 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/High Retention Rates.svg" width="24" height="29"
                     class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip"
+                <span class="about-us-sub-text tooltip-container" #tooltip12="matTooltip" (click)="tooltip12.show()"
                     matTooltip="Our focus on finding the right fit results in high
-                    retention rates for our placements, benefiting employers seeking long-term, reliable employees.">High Retention
+                    retention rates for our placements, benefiting employers seeking long-term, reliable employees.">High
+                    Retention
                     Rates</span>
             </div>
         </div>
