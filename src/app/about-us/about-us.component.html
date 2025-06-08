@@ -119,18 +119,19 @@
         <img src="../../assets/images/why choose us img 1.jpg" class="responsive sub-padding ps-10">
     </div>
     <div class="col-md-6 align-content-center bg-about-us1">
-        <div class="row g-6 sub-padding">
+        <div class="row g-6 sub-padding" (scroll)="tooltip.hide()">
             <div class="col-md-6 d-flex"><img src="../../assets/images/Experience & Reputation.svg" width="24"
                     height="29" class="me-3">
                 <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" (click)="tooltip.show()"
-                    (scroll)="tooltip.hide()" matTooltip="Deep understanding of market dynamics make us a
+                    matTooltip="Deep understanding of market dynamics make us a
                         reliable and trusted partner for temporary and contract staffing services.">Experience &
                     Reputation</span>
             </div>
             <div class="col-md-6 d-flex"><img src="../../assets/images/Excellent Candidate Support.svg" width="24"
                     height="29" class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" matTooltip="We offer comprehensive support throughout the
+                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" (click)="tooltip.show()"
+                    matTooltip="We offer comprehensive support throughout the
                     hiring process, including resume assistance and interview preparation. This level of candidate
                     care enhances performance during the evaluation period, a key aspect of our role as a temporary
                     and contract recruiting firm.">Excellent Candidate
@@ -139,7 +140,8 @@
             <div class="col-md-6 d-flex"><img src="../../assets/images/Quality of Candidates.svg" width="24" height="29"
                     class="me-3">
 
-                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" matTooltip="Our rigorous screening process ensures that only
+                <span class="about-us-sub-text tooltip-container" #tooltip="matTooltip" (click)="tooltip.show()"
+                    matTooltip="Our rigorous screening process ensures that only
                     the most qualified candidates are presented to employers. This meticulous approach,
                     characteristic of expert temporary and contract recruiters, significantly reduces the risk of
                     unsuccessful placements, saving time and resources.">Quality of
