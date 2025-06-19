@@ -46,9 +46,8 @@
         </div>
         <div class="col-md-6">
             <div class="card about-cards">
-                <div class="card-body py-4 row">
-                    <div class="col-md-12">
-                        <img src="../../assets/images/Ellipse 51.svg" class="vision-image responsive">
+                <div class="card-body py-4 row core-values-div">
+                    <div class="col-md-6">
                         <div class="about-card-main">Our
                             <div class="about-card-sub">MISSION</div>
                         </div>
@@ -59,16 +58,16 @@
                             facilitate meaningful connections between candidates and employers.
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <img src="../../assets/images/Ellipse 51.svg" class="vision-image responsive">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="card about-cards h-100">
-                <div class="card-body py-4 row">
-                    <div class="col-md-12">
-                        <div class="text-end">
-                            <img src="../../assets/images/Ellipse 52.svg" class="bullseye-arrow-image responsive">
-                        </div>
+                <div class="card-body py-4 row core-values-div">
+                    <div class="col-md-6">
                         <div class="about-card-main">Our
                             <div class="about-card-sub">VISION</div>
                         </div>
@@ -77,6 +76,9 @@
                             exceptional talent. We aspire to lead the market by setting new standards in IT recruitment,
                             helping businesses grow by finding the perfect match for their teams.
                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../../assets/images/Ellipse 52.svg" class="bullseye-arrow-image responsive">
                     </div>
                 </div>
             </div>
@@ -122,8 +124,8 @@
         <div class="row g-6 sub-padding">
             <div class="col-md-6 d-flex"><img src="../../assets/images/Experience & Reputation.svg" width="24"
                     height="29" class="me-3">
-                <span class="about-us-sub-text tooltip-container" #tooltip1="matTooltip" (click)="tooltip1.show()"
-                    matTooltip="Deep understanding of market dynamics make us a
+                <span class="about-us-sub-text tooltip-container" #tooltip1="matTooltip" (mouseover)="tooltip1.show()"
+                    (mouseleave)="tooltip1.hide()" (click)="tooltip1.show()" matTooltip="Deep understanding of market dynamics make us a
                         reliable and trusted partner for temporary and contract staffing services.">Experience &
                     Reputation</span>
             </div>
