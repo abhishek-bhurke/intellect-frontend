@@ -306,7 +306,13 @@
     }
 
     .why-choose-us-cards .card {
-        height: 340px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 760px) {
+    .why-choose-us-cards .card {
+        height: 280px;
     }
 }
 
@@ -342,7 +348,7 @@
 }
 
 .why-choose-us-cards .card:hover .hover-content {
-    top: 20%;
+    top: 25%;
     opacity: 1;
     transform: translateY(0);
 }
