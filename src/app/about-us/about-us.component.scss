@@ -297,16 +297,16 @@
 }
 
 .why-choose-us-cards {
-    padding: 0px 10%;
+    padding: 0px 5%;
 }
 
 @media (max-width: 1290px) {
     .why-choose-us-cards {
-        padding: 0px 7%;
+        padding: 0px 5%;
     }
 
     .why-choose-us-cards .card {
-        height: 311px;
+        height: 340px;
     }
 }
 
@@ -342,7 +342,7 @@
 }
 
 .why-choose-us-cards .card:hover .hover-content {
-    top: 60px;
+    top: 20%;
     opacity: 1;
     transform: translateY(0);
 }
