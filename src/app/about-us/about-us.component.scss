@@ -306,7 +306,7 @@
     }
 
     .why-choose-us-cards .card {
-        height: 315px;
+        height: 345px;
     }
 }
 
@@ -318,6 +318,7 @@
 
 .hover-content {
     font-size: 14px;
+    text-align: center;
 }
 
 .why-choose-us-logo,
@@ -348,7 +349,7 @@
 }
 
 .why-choose-us-cards .card:hover .hover-content {
-    top: 25%;
+    top: 20%;
     opacity: 1;
     transform: translateY(0);
 }
