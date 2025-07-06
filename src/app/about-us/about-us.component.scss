@@ -256,3 +256,95 @@
         white-space: nowrap;
     }
 }
+
+.why-choose-us-logo {
+    // text-align: center;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.why-choose-us-text {
+    text-align: center;
+    top: 50%;
+    margin-top: 10%;
+    color: $dark-blue;
+    font-size: 20px;
+    font-weight: 700;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.why-choose-us-cards .card {
+    height: 300px;
+    width: 100%;
+    max-width: 378px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-us-cards .card:hover {
+    background: linear-gradient(to right, #93CBF1,
+            #5C73B9);
+    border: unset;
+}
+
+.why-choose-us-cards .card-body {
+    align-content: center;
+    height: 100%;
+}
+
+.why-choose-us-cards {
+    padding: 0px 10%;
+}
+
+@media (max-width: 1290px) {
+    .why-choose-us-cards {
+        padding: 0px 7%;
+    }
+
+    .why-choose-us-cards .card {
+        height: 311px;
+    }
+
+    .hover-content {
+        font-size: 14px;
+    }
+}
+
+
+
+.why-choose-us-logo,
+.why-choose-us-text,
+.hover-content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.4s ease;
+    padding: 0 1rem;
+}
+
+.hover-content {
+    top: 60%;
+    opacity: 0;
+    transform: translateY(20px);
+    color: $white-color;
+}
+
+.why-choose-us-cards .card:hover .why-choose-us-logo {
+    opacity: 0;
+}
+
+.why-choose-us-cards .card:hover .why-choose-us-text {
+    top: 0px;
+    transform: translateY(1);
+    color: $white-color;
+}
+
+.why-choose-us-cards .card:hover .hover-content {
+    top: 60px;
+    opacity: 1;
+    transform: translateY(0);
+}
