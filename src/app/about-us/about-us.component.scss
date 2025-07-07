@@ -353,3 +353,13 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+    .why-choose-us-img-2 {
+        display: none;
+    }
+
+    .trusted-relationship-row {
+        padding: 0 3%;
+    }
+}
