@@ -72,7 +72,7 @@ export class ContactUsComponent {
     }
   }
   goToLinkedin() {
-    window.open('https://www.linkedin.com/company/intellect-isolutions', '_blank')
+    window.open('https://www.linkedin.com/company/intellect-isolutions-llc/', '_blank')
   }
   tellUs(event: any) {
     if (this.contactUsForm.controls['whoYouAre'].value == 'Hiring Manager / Client') {
