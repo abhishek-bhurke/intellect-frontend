@@ -42,8 +42,13 @@
 .services-icon-circle {
     width: 72px;
     height: 72px;
-    background-color: rgba(140, 185, 248, 0.1);
+    background-color: #F3F8FE;
     border-radius: 50%;
+    color: #1B3B7C;
+}
+
+.services-icon-circle>span {
+    font-size: 40px;
 }
 
 .technology-card-main {
@@ -315,3 +320,19 @@
 //         height: 609px !important;
 //     }
 // }
+
+.services-icon-border {
+    max-width: 250px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to top, #1B3B7C, #8CB9F8);
+    padding: 1px;
+    border-radius: 50%;
+}
+
+::ng-deep.mdc-tab__text-label {
+    font-size: 22px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    color: #1B3B7C !important;
+}

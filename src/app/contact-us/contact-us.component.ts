@@ -23,7 +23,7 @@ export class ContactUsComponent {
   }
   createForm() {
     this.contactUsForm = this.fb.group({
-      'whoYouAre': ['Hiring Manager / Client', Validators.required],
+      'whoYouAre': ['Hiring Manager / Client'],
       'firstName': ['', Validators.required],
       'lastName': ['', Validators.required],
       'companyName': ['', Validators.required],
